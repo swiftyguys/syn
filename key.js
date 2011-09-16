@@ -1,5 +1,4 @@
-steal.then(function(){
-(function() {
+(function(){
 	var h = Syn.helpers,
 		S = Syn,
 
@@ -546,6 +545,7 @@ steal.then(function(){
 					}
 				}
 				orders.sort(sort);
+				console.log(focusEls, tabIndex)
 				//now find current
 				for ( i = 0; i < orders.length; i++ ) {
 					el = orders[i][0];
@@ -903,5 +903,4 @@ steal.then(function(){
 
 		S.support.ready++;
 	})();
-}());
-})
+})()

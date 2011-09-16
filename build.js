@@ -1,10 +1,10 @@
-load('steal/rhino/steal.js')
+load('steal/rhino/rhino.js')
 
 /**
  * Build syn, funcunit, user-extensions
  */
 steal.File('funcunit/syn/dist').mkdir()
-steal('//steal/build/pluginify/pluginify', function(s){
+steal('steal/build/pluginify', function(s){
 	steal.build.pluginify("funcunit/syn",{
 		global: "true",
 		nojquery: true,
@@ -20,7 +20,7 @@ var copyToDist = function(path){
 	steal.File(path).copyTo("funcunit/syn/resources/"+fileName);
 }
 var filesToCopy = [
-	"funcunit/resources/jquery.js"
+	"jquery/jquery.js"
 ]
 
 for(var i = 0; i < filesToCopy.length; i++) {
